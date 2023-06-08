@@ -5,8 +5,10 @@ import React from 'react'
 const WaterMark = () => {
     const styles = {
         waterMark: {
-            position: 'absolute',
-            top: '50px',
+            color: '#848484',
+            fontSize: '20px',
+            margin: 'auto',
+            padding: '25px',
         },
     }
   

@@ -1,15 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import StartScreen from './screens/StartScreen/StartScreen';
-import LoginScreen from './screens/LoginScreen/LoginScreen';
+import {LoginScreen, StartScreen, MainScreen} from './screens/index'
+import RoutePages from './components/ComponentRouter';
+
 
 function App() {
   return (
     <div className="App">
       <div className='main'>
-        {/* <StartScreen/> */}
-        <LoginScreen/>
-        
+        {/* <RoutePages /> */}
+        {/* <LoginScreen /> */}
+        {/* <StartScreen /> */}
+        <MainScreen/>
       </div>
     </div>
   );
