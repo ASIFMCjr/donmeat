@@ -1,21 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LoginScreen, StartScreen, MainScreen } from '../../screens'
 
-const RoutePages = () => (
+const RoutePages = () => {
 
-  // const isLogged = () => {
-  //   if (localStorage.getItem('user') !== '') {
-  //     return true
-  //   }
-  // }
-  
+  const isLogged = () => {
+    const user = localStorage.getItem('user')
+    if (user !== '') {
+      return true
+    }
+  }
+
+  return (
   <Router>
     <Routes>
-      <Route path="/" element={<StartScreen/>} />
-      {/* <Route path="login" element={<LoginScreen />} /> */}
+      <Route path="/" element={isLogged ? <MainScreen/> : <StartScreen/>} />
+      <Route path="login" element={<LoginScreen />} />
     </Routes>
     
   </Router>
-  );
+  )
+}
   
   export default RoutePages;

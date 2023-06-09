@@ -8,10 +8,10 @@ function App() {
   return (
     <div className="App">
       <div className='main'>
-        {/* <RoutePages /> */}
+        <RoutePages />
         {/* <LoginScreen /> */}
         {/* <StartScreen /> */}
-        <MainScreen/>
+        {/* <MainScreen/> */}
       </div>
     </div>
   );
